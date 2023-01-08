@@ -2,8 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import routes from './src/routes/routes';
-import db  from './src/database/config';
+import routes from './routes/routes';
+import db  from './database/config';
 
 const port = process.env.PORT || 8000;
 const app = express();

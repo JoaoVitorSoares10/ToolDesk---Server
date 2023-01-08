@@ -40,6 +40,7 @@ export const Tickets = async (req:Request, res:Response)=> {
 
 export const ticketById = async (req:Request, res:Response)=> {
     try{
+        //@ts-ignore
         const data:ITicket[] = await ticket.findById(req.params.id).exec()
         return res.json(data).status(302);
     }catch(err){
@@ -49,6 +50,7 @@ export const ticketById = async (req:Request, res:Response)=> {
 
 export const ticketRegister = async (req:Request, res:Response) => {
     try{
+        //@ts-ignore
         const data:ITicket[] = await ticket.create(req.body)
         return res.json(data).status(201);
     }catch(err){

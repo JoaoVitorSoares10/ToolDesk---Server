@@ -18,6 +18,7 @@ export const subjects = async (req:Request, res:Response)=> {
 
 export const subjectRegister = async (req:Request, res:Response) => {
     try{
+        //@ts-ignore
         const data:ISubject[] = await subject.create(req.body)
         return res.json(data).status(201);
     }catch(err){

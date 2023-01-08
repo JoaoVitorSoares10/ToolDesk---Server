@@ -1,11 +1,11 @@
 {
   "name": "nodetypescript",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn ./index.ts",
-    "start": "node ./index.ts"
+    "start": "tsc && node dist/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
